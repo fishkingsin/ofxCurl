@@ -2,9 +2,7 @@
 #include "ofxCurlFormType.h"
 #include "ofxCurlFormTypeInput.h"
 #include "ofxCurlFormTypeFile.h"
-#include <algorithm>
-#include <iterator>
-#include <set>
+
 #include <iostream>
 
 // copy response data of form post into buffer.
@@ -35,7 +33,6 @@ ofxCurlForm::~ofxCurlForm() {
 
 ofxCurlForm& ofxCurlForm::setTimeout(int nTimeoutMillis) {
 	timeout_after_ms = nTimeoutMillis;
-	return *this;
 }
 
 ofxCurlForm& ofxCurlForm::addInput(std::string sName, std::string sValue) {
